@@ -1,0 +1,12 @@
+name: CustomMagica
+version: Umm...
+api-version: 1.20
+main: taewookim.CustomMagica
+
+commands:
+  magica:
+    permission: magica.admin
+
+permissions:
+  magica.admin:
+    default: op
