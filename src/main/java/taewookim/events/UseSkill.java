@@ -5,6 +5,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.entity.EntityInteractEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -43,8 +44,24 @@ public class UseSkill implements Listener {
     }
 
     @EventHandler
+    public void inter1(PlayerInteractEvent e) {
+        if(e.getPlayer().getItemInHand()!=null) {
+            ItemStack i = e.getPlayer().getItemInHand();
+            if(i.hasItemMeta()&&!e.getPlayer().hasCooldown(i.getType())) {
+                ItemMeta m = i.getItemMeta();
+                PersistentDataContainer per = m.getPersistentDataContainer();
+                if(per.has(CustomMagica.itemtypekey, PersistentDataType.STRING)
+                        &&per.get(CustomMagica.itemtypekey, PersistentDataType.STRING).equalsIgnoreCase("magicbook")) {
+                    useSkill(e.getPlayer(), per);
+                    e.getPlayer().setCooldown(i.getType(), 20);
+                }
+            }
+        }
+    }
+
+    @EventHandler
     public void inter(PlayerInteractEvent e) {
-        if(e.getAction().equals(Action.RIGHT_CLICK_AIR)) {
+        if(e.getAction().equals(Action.RIGHT_CLICK_AIR)||e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
             if(e.getPlayer().getItemInHand()!=null) {
                 ItemStack i = e.getPlayer().getItemInHand();
                 if(i.hasItemMeta()&&!e.getPlayer().hasCooldown(i.getType())) {
@@ -53,6 +70,7 @@ public class UseSkill implements Listener {
                     if(per.has(CustomMagica.itemtypekey, PersistentDataType.STRING)
                             &&per.get(CustomMagica.itemtypekey, PersistentDataType.STRING).equalsIgnoreCase("magicbook")) {
                         useSkill(e.getPlayer(), per);
+                        e.getPlayer().setCooldown(i.getType(), 20);
                     }
                 }
             }

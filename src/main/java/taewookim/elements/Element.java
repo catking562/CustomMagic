@@ -33,6 +33,15 @@ public class Element {
         this.strength = strength;
     }
 
+    public Element clone() {
+        try{
+            Element cl = this.getClass().getDeclaredConstructor(new Class[]{Elements.class, Integer.class}).newInstance(element, strength);
+            return cl;
+        }catch(Exception e) {
+            return null;
+        }
+    }
+
     public void Start(Location loc) {
 
     }

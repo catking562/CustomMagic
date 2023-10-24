@@ -160,7 +160,8 @@ public class InventoryClick implements Listener {
                                                     ItemMeta m11 = i11.getItemMeta();
                                                     PersistentDataContainer per11 = m11.getPersistentDataContainer();
                                                     if(per11.has(CustomMagica.itemtypekey, PersistentDataType.STRING)
-                                                            &&per11.get(CustomMagica.itemtypekey, PersistentDataType.STRING).equalsIgnoreCase("magicbook")) {
+                                                            &&per11.get(CustomMagica.itemtypekey, PersistentDataType.STRING).equalsIgnoreCase("magicbook")
+                                                            &&(per11.get(CustomMagica.skillsizekey, PersistentDataType.INTEGER)+per10.get(CustomMagica.skillsizekey, PersistentDataType.INTEGER)<=100)) {
                                                         p.getInventory().addItem(CraftingMagic.getMagicwithAdd(i10, i11));
                                                         e.getInventory().setItem(10, new ItemStack(Material.AIR));
                                                         e.getInventory().setItem(11, new ItemStack(Material.AIR));

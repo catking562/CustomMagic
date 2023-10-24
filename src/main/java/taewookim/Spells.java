@@ -5,13 +5,16 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
-import taewookim.magic.Spell;
+import taewookim.magic.*;
 
 import java.util.Arrays;
 
 public enum Spells {
 
-    None("없음", Spell.class);
+    NONE("없음", Spell.class), PROJECTILE("발사체", SpellProjectile.class), EXPLOSION("폭발", SpellExplosion.class),
+    WAVE("웨이브", SpellWave.class), TARGET("타게팅", SpellTarget.class), UP("업", SpellUp.class), GRAVITY("그래비티", SpellGravity.class),
+    MIDWAVE("미드웨이브", SpellMidWave.class), LAZER("레이저", SpellLazer.class)
+    ;
 
     final String name;
     final Class<? extends Spell> clz;
