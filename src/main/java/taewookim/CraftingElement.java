@@ -10,7 +10,9 @@ import java.util.Arrays;
 
 public enum CraftingElement {
 
-    NONE("§7무의 원소", Material.BLACK_TERRACOTTA), FIRE("§c불의 원소", Material.RED_DYE);
+    NONE("§7무의 원소", Material.BLACK_TERRACOTTA), FIRE("§c불의 원소", Material.RED_DYE),
+    WATER("§b물의 원소", Material.PRISMARINE)
+    ;
 
     final String name;
     final Material material;

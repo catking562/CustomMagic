@@ -25,6 +25,10 @@ public class Element {
                 par = Particle.FLAME;
                 color = Color.RED;
                 break;
+            case WATER:
+                par = Particle.WATER_DROP;
+                color = Color.AQUA;
+                break;
             default:
                 par = Particle.CLOUD;
                 color = Color.BLACK;

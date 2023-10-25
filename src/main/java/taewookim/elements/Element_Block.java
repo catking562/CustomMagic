@@ -37,6 +37,8 @@ public class Element_Block extends Element {
             case FIRE:
                 display.setItemStack(new ItemStack(Material.MAGMA_BLOCK));
                 break;
+            case WATER:
+                display.setItemStack(new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS));
             default:
                 display.setItemStack(new ItemStack(Material.BLACK_CONCRETE));
                 break;

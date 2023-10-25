@@ -4,26 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4359ae98-4068-47eb-9943-be9c46b3b497" name="Changes" comment="알고리즘 완성">
-      <change afterPath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellBarrage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellExplosion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellGravity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellLazer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellMidWave.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellPassProjectile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellProjectile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellTarget.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellWave.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/taewookim/math/R.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/taewookim/math/TriangleMath.java" afterDir="false" />
+    <list default="true" id="4359ae98-4068-47eb-9943-be9c46b3b497" name="Changes" comment="업데이트">
+      <change afterPath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellFocus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellNearTarget.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewookim/CraftingElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewookim/CraftingElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewookim/Elements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewookim/Elements.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/taewookim/Spells.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewookim/Spells.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/taewookim/elements/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewookim/elements/Element.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taewookim/elements/Element_Normal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewookim/elements/Element_Normal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taewookim/events/InventoryClick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewookim/events/InventoryClick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taewookim/events/UseSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewookim/events/UseSkill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewookim/elements/Element_Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewookim/elements/Element_Block.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/taewookim/magic/Spell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewookim/magic/Spell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellBarrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellBarrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellLazer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewookim/magic/SpellLazer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,11 +81,19 @@
       <option name="project" value="LOCAL" />
       <updated>1698069089580</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="업데이트">
+      <created>1698124307060</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698124307060</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="알고리즘 완성" />
-    <option name="LAST_COMMIT_MESSAGE" value="알고리즘 완성" />
+    <MESSAGE value="업데이트" />
+    <option name="LAST_COMMIT_MESSAGE" value="업데이트" />
   </component>
 </project>

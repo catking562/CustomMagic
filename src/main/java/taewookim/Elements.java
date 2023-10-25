@@ -8,7 +8,9 @@ import org.bukkit.persistence.PersistentDataType;
 
 public enum Elements {
 
-    NONE("§7무의 원소 조각", Material.BLACK_DYE), FIRE("§c불의 원소 조각", Material.FIRE_CHARGE);
+    NONE("§7무의 원소 조각", Material.BLACK_DYE), FIRE("§c불의 원소 조각", Material.FIRE_CHARGE),
+    WATER("§b물의 원소 조각", Material.TUBE_CORAL_FAN)
+    ;
 
     final String name;
     final Material material;

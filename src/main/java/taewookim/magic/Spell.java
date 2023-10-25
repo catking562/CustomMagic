@@ -3,6 +3,8 @@ package taewookim.magic;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
 import taewookim.CustomMagica;
 import taewookim.Elements;
@@ -27,6 +29,7 @@ public class Spell {
     public boolean isStart = false;
     public int tick = 0;
     public final int maxtick;
+    final int dur;
 
     public Spell(Element element, LivingEntity magica, Integer strength) {
         this.element = element;
@@ -34,6 +37,7 @@ public class Spell {
         this.magica = magica;
         element.spell = this;
         maxtick = 10*strength*strength;
+        dur = strength*20;
     }
 
     public void runNext() {
@@ -60,18 +64,26 @@ public class Spell {
 
     public void Damage_Fire(LivingEntity en, double damage) {
         en.damage(damage, magica);
-        en.setFireTicks(20*strength);
+        en.setFireTicks(dur);
+    }
+
+    public void Damage_Water(LivingEntity en, double damage) {
+        en.damage(damage, magica);
+        en.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, dur, 1));
     }
 
     public void Damage(LivingEntity en, double damage) {
         if(!canDamage(en)) {return;}
         Elements ele = element.element;
         switch(ele) {
-            case NONE:
-                Damage_None(en, damage*this.damage);
-                break;
             case FIRE:
                 Damage_Fire(en, damage*this.damage);
+                break;
+            case WATER:
+                Damage_Water(en, damage*this.damage);
+                break;
+            default:
+                Damage_None(en, damage*this.damage);
                 break;
         }
     }

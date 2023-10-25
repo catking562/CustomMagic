@@ -13,7 +13,8 @@ public enum Spells {
 
     NONE("없음", Spell.class), PROJECTILE("발사체", SpellProjectile.class), EXPLOSION("폭발", SpellExplosion.class),
     WAVE("웨이브", SpellWave.class), TARGET("타게팅", SpellTarget.class), UP("업", SpellUp.class), GRAVITY("그래비티", SpellGravity.class),
-    MIDWAVE("미드웨이브", SpellMidWave.class), LAZER("레이저", SpellLazer.class)
+    MIDWAVE("미드웨이브", SpellMidWave.class), LAZER("레이저", SpellLazer.class), BARRAGE("포격", SpellBarrage.class), NEAR("니어", SpellNearTarget.class),
+
     ;
 
     final String name;

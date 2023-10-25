@@ -14,11 +14,14 @@ public class SpellLazer extends Spell {
     @Override
     public void Start() {
         super.Start();
+        if(vector==null) {
+            vector = location.getDirection();
+        }
         isEnd = true;
         Location loc = location.clone();
-        element.Update(loc);
         for(int i = 0; i<strength*5; i++) {
-            loc.add(loc.getDirection());
+            loc.add(vector);
+            element.Update(loc);
             for(Entity en : loc.getWorld().getNearbyEntities(loc, 1, 1, 1)) {
                 if(!en.equals(magica)&&en instanceof LivingEntity le) {
                     Damage(le, strength);
